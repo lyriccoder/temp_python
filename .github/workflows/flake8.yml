@@ -26,7 +26,7 @@ jobs:
           args: "--ignore=E121"
 
   mypy:
-    name: Mypy
+    name: mypy
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -34,7 +34,8 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.7.7'
-      - name: Install dependencies
+          deps_list: 'requirements.txt'
+      - name: Run mypy
         run: |
           python3 -m mypy aibolit
 
