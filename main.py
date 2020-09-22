@@ -8,7 +8,7 @@ def ccc():
 
 def Precommit(a: List[int]):
     if True:
-        print(Path(".") + " 11111" + "22222")
+        print(str(Path(".")) + " 11111" + "22222")
 
 
 Precommit((1))
