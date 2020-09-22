@@ -25,9 +25,9 @@ from deprecated import deprecated  # type: ignore
 
 from typing import Dict
 
-from aibolit.utils.ast_builder import build_ast
-from aibolit.ast_framework import AST, ASTNodeType
-from aibolit.ast_framework.java_class import JavaClass
+from temp_python.utils.ast_builder import build_ast
+from temp_python.ast_framework import AST, ASTNodeType
+from temp_python.ast_framework.java_class import JavaClass
 
 
 @deprecated("This functionality must be transmitted to ASTNode")

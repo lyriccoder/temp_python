@@ -23,7 +23,7 @@
 from typing import Union, Any, Callable
 from itertools import chain
 
-from aibolit.ast_framework import ASTNode
+from temp_python.ast_framework import ASTNode
 
 
 def chain_field_getter_factory(*steps: Union[str, int]) -> Callable[[ASTNode], Any]:

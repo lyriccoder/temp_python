@@ -25,13 +25,13 @@ from typing import Any, List, Iterator, Optional
 from networkx import DiGraph, dfs_preorder_nodes  # type: ignore
 from cached_property import cached_property  # type: ignore
 
-from aibolit.ast_framework._auxiliary_data import (
+from temp_python.ast_framework._auxiliary_data import (
     common_attributes,
     attributes_by_node_type,
     ASTNodeReference,
 )
-from aibolit.ast_framework import ASTNodeType
-from aibolit.ast_framework.computed_fields_registry import computed_fields_registry
+from temp_python.ast_framework import ASTNodeType
+from temp_python.ast_framework.computed_fields_registry import computed_fields_registry
 
 
 class ASTNode:

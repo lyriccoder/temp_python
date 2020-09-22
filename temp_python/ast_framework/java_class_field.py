@@ -26,10 +26,10 @@ from deprecated import deprecated  # type: ignore
 from typing import TYPE_CHECKING
 from networkx import DiGraph  # type: ignore
 
-from aibolit.ast_framework import AST, ASTNodeType
+from temp_python.ast_framework import AST, ASTNodeType
 
 if TYPE_CHECKING:
-    from aibolit.ast_framework.java_class import JavaClass
+    from temp_python.ast_framework.java_class import JavaClass
 
 
 @deprecated("This functionality must be transmitted to ASTNode")

@@ -20,8 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from aibolit.ast_framework.computed_fields_registry import computed_fields_registry
-from aibolit.ast_framework import ASTNodeType
+from temp_python.ast_framework.computed_fields_registry import computed_fields_registry
+from temp_python.ast_framework import ASTNodeType
 
 from .nodes_filter import nodes_filter_factory
 from .chained_fields import chain_field_getter_factory

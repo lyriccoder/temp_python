@@ -25,7 +25,7 @@ import sys
 from typing import Dict, Callable, Any, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from aibolit.ast_framework import ASTNode, ASTNodeType  # noqa: F401
+    from temp_python.ast_framework import ASTNode, ASTNodeType  # noqa: F401
 
 
 class _ComputedFieldsRegistry:

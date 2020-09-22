@@ -22,7 +22,7 @@
 
 from typing import Callable, Iterator
 
-from aibolit.ast_framework import ASTNode, ASTNodeType
+from temp_python.ast_framework import ASTNode, ASTNodeType
 
 
 def nodes_filter_factory(

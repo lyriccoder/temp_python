@@ -25,7 +25,7 @@ from typing import Dict, Set, Type, NamedTuple
 from javalang import tree
 from javalang.ast import Node
 
-from aibolit.ast_framework import ASTNodeType
+from temp_python.ast_framework import ASTNodeType
 
 
 class ASTNodeReference(NamedTuple):
