@@ -9,24 +9,6 @@ on:
     branches: [ master ]
 
 jobs:
-  lint:
-    name: Check PEP8 formatting
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Run Python code quality and lint action
-        uses: ricardochaves/python-lint@v1.3.0
-        with:
-          python-root-list: "charms"
-          use-flake8: false
-          use-pylint: false
-          use-pycodestyle: false
-          use-black: false
-          use-mypy: true
-          use-isort: false
-          extra-flake8-options: "--max-line-length=88 --max-complexity=10"
-
   flake8:
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +25,18 @@ jobs:
           # Additional arguments to pass to flake8, default "." (current directory)
           args: "--ignore=E121"
 
-  test:
+  mypy:
+    name: Mypy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements-dev.txt
+
+  Tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
