@@ -24,7 +24,24 @@ jobs:
           event-type: flake8-event
           # Additional arguments to pass to flake8, default "." (current directory)
           args: "--ignore=E121"
-
+  mypy:
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ricardochaves/python-lint@v1.3.0
+        with:
+          python-root-list: "python_alelo tests"
+          use-pylint: false
+          use-pycodestyle: false
+          use-flake8: false
+          use-black: false
+          use-mypy: true
+          use-isort: false
+          extra-pylint-options: ""
+          extra-pycodestyle-options: ""
+          extra-flake8-options: ""
+          extra-black-options: ""
+          extra-mypy-options: ""
+          extra-isort-options: ""
   test:
     runs-on: ubuntu-latest
     steps:
