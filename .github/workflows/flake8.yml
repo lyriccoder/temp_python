@@ -24,27 +24,17 @@ jobs:
           event-type: flake8-event
           # Additional arguments to pass to flake8, default "." (current directory)
           args: "--ignore=E121"
-  mypy:
+
+  test:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: mypy
-        uses: sunnysid3up/python-linter@master
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v2
         with:
-          source: "src"
-          mypy-options: "--ignore-missing-imports --show-error-codes"
-          pylint-options: "--rcfile=setup.cfg"
-          isort-options: "-w 100",
-          django: true
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@master
-        - uses: actions/setup-python@v2
-          with:
-            python-version: '3.7.7'
-        - name: Test
-          uses: onichandame/python-test-action@master
-          with:
-            deps_list: 'requirements.txt'
+          python-version: '3.7.7'
+      - name: Test
+        uses: onichandame/python-test-action@master
+        with:
+          deps_list: 'requirements.txt'
 
 
