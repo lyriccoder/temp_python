@@ -1,0 +1,2 @@
+typing-extensions; python_version<'3.8'
+tqdm == 4.32.1
