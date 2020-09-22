@@ -5,9 +5,7 @@ setup(
     name='veniq',
     version=temp_python.__version__,
     description=temp_python.__doc__.strip(),
-    long_description='Veniq uses Machine Learning '
-                     'to analyze source code, find possible refactorings, '
-                     'and suggest those that seem optimal',
+    long_description='Govno',
     url='https://github.com/cqfn/veniq.git',
     download_url='https://github.com/cqfn/veniq.git',
     author=temp_python.__author__,
@@ -16,7 +14,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'veniq = veniq.__main__:main'
+            'temp_python = temp_python.__main__:main'
         ],
     },
     extras_require={},
