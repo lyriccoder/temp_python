@@ -5,8 +5,8 @@ on:
     types: [created, edited] # issue comment is created or edited
   issues:
     types: [opened, edited] # issue is opened or edited
-  pull_request:
-    branches: [ master ]
+  pull_request_review_comment:
+    types: [created, edited]
     
 jobs:
   polls:
