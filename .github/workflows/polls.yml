@@ -5,7 +5,9 @@ on:
     types: [created, edited] # issue comment is created or edited
   issues:
     types: [opened, edited] # issue is opened or edited
-
+  pull_request:
+    branches: [ master ]
+    
 jobs:
   polls:
     runs-on: ubuntu-latest
