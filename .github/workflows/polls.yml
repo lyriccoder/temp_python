@@ -5,13 +5,16 @@ on:
     types: [created, edited] # issue comment is created or edited
   issues:
     types: [opened, edited] # issue is opened or edited
-  pull_request_review_comment:
-    types: [created, edited]
     
 jobs:
-  polls:
+  pr_commented:
+    # This job only runs for pull request comments
+    name: PR comment
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
     - uses: imjohnbo/gh-polls-bot-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # created for you automatically; https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-actions#github_token-secret
+
+
