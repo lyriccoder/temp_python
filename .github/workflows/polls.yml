@@ -1,0 +1,2 @@
+- name: GitHub Polls Bot Action
+  uses: imjohnbo/gh-polls-bot-action@v2.0.2
