@@ -1,2 +1,18 @@
+flake8==3.7.9
+codecov==2.0.15
+matplotlib==3.2.1
+coverage==5.0.3
+javalang==0.13.0
+beautifulsoup4==4.8.2
+numpy==1.18.1
+pandas==1.0.0
+mypy==0.770
+networkx==2.4
+cchardet==2.1.6
+lxml==4.5.0
+cached-property==1.2.0
+deprecated==1.2.10
 typing-extensions; python_version<'3.8'
 tqdm == 4.32.1
+bs4==0.0.1
+pebble==4.5.3
