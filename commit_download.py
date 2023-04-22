@@ -41,9 +41,6 @@ requests.urllib3.disable_warnings()
 
 # HERE there must be tokens for github API
 tokens = [
-    ('lyriccoder', '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'),
-    ('Akakyi', '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'),
-    ('govnokoder2021', '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'),
 ]
 
 logger.remove(0)
